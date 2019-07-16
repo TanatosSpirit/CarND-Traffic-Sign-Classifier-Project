@@ -107,8 +107,8 @@ The code for calculating the accuracy of the model is in cell 14, 15.
 
 My final model results were:
 * training set accuracy of 1.00
-* validation set accuracy of 0.934 
-* test set accuracy of 0.939
+* validation set accuracy of 0.951
+* test set accuracy of 0.944
 
 If an iterative approach was chosen:
 
@@ -138,8 +138,8 @@ The LeNet was taken as a basis, but accuracy was not enough. Eventually, the bas
 
 Here are five German traffic signs that I found on the web:
 
-![alt text][image3] ![alt text][image4] ![alt text][image5] 
-![alt text][image6] ![alt text][image7]
+![image3] ![image4] ![image5] 
+![image6] ![image7]
 
 I think that all found images can be easily classified.
 
