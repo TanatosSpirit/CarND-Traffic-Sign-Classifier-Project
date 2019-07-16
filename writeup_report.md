@@ -21,11 +21,11 @@ The goals / steps of this project are the following:
 
 [image1]: ./images/bar_chart.png "bar_chart"
 [image2]: ./images/data_viz.png "data_viz"
-[image3]: ./images/2.jpg "2"
-[image4]: ./images/12.jpg "12"
-[image5]: ./images/28.jpg "28"
-[image6]: ./images/34.jpg "34"
-[image7]: ./images/36.jpg "36"
+[image3]: ./images/2.JPG "2"
+[image4]: ./images/12.JPG "12"
+[image5]: ./images/28.JPG "28"
+[image6]: ./images/34.JPG "34"
+[image7]: ./images/36.JPG "36"
 
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
