@@ -58,7 +58,7 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 
 Here are examples from each class
 
-![image21]
+![image2]
 
 ### Design and Test a Model Architecture
 
@@ -106,7 +106,7 @@ For my training optimizers I used softmax_cross_entropy_with_logits to get a ten
 The code for calculating the accuracy of the model is in cell 14, 15.
 
 My final model results were:
-* training set accuracy of ?
+* training set accuracy of 1.00
 * validation set accuracy of 0.934 
 * test set accuracy of 0.939
 
@@ -126,11 +126,11 @@ I changed LeNet input from 32x32x1 to 32x32x3 and output from 10 to 43 according
 
 * Which parameters were tuned? How were they adjusted and why?
 
-I also tuned number of epoch to 20.
+I also tuned number of epoch to 20 because 10 epochs were not enough to get accuracy well.
 
 * What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
 
-?
+The LeNet was taken as a basis, but accuracy was not enough. Eventually, the basic idea was that the network is overfitting. Therefore I added a dropout layer.
 
 ### Test a Model on New Images
 
@@ -141,7 +141,7 @@ Here are five German traffic signs that I found on the web:
 ![alt text][image3] ![alt text][image4] ![alt text][image5] 
 ![alt text][image6] ![alt text][image7]
 
-The first image might be difficult to classify because ? .
+I think that all found images can be easily classified.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -178,20 +178,43 @@ For the second image, the model is relatively sure that this is a Priority road 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | 1.00         			| Priority road   									| 
-| .00     				| Traffic signals 										|
+| .00     				| Beware of ice/snow 										|
 | .00					| Right-of-way at the next intersection											|
 | .00	      			| End of no passing by vehicles over 3.5 metric tons					 				|
-| .00				    | Stop     							|
+| .00				    | End of no passing     							|
 
-For the third image, the model is relatively sure that this is a Children crossing (probability of 0.98), and the image does contain a Children crossing. The top five soft max probabilities were
+For the third image, the model is relatively sure that this is a Children crossing (probability of 1.00), and the image does contain a Children crossing. The top five soft max probabilities were
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| 0.98         			| Children crossing   									| 
-| .00     				| Road narrows on the right 										|
+| 1.00         			| Children crossing   									| 
+| .00     				| Pedestrians 										|
 | .00					| Right-of-way at the next intersection											|
-| .00	      			| End of no passing by vehicles over 3.5 metric tons					 				|
-| .00				    | Stop     							|
+| .00	      			| General caution					 				|
+| .00				    | Dangerous curve to the right     							|
+
+
+For the fourth image, the model is relatively sure that this is a Turn left ahead (probability of 1.00), and the image does contain a Children crossing. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| 1.00         			| Turn left ahead   									| 
+| .00     				| Keep right 										|
+| .00					| Ahead only											|
+| .00	      			| Road work					 				|
+| .00				    | Go straight or right     							|
+
+
+For the fourth image, the model is relatively sure that this is a Go straight or right (probability of 0.98), and the image does contain a Children crossing. The top five soft max probabilities were
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .99        			| Go straight or right   									| 
+| .01     				| Keep right 										|
+| .00					| Turn right ahead											|
+| .00	      			| Turn left ahead					 				|
+| .00				    | Dangerous curve to the right     							|
+
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
